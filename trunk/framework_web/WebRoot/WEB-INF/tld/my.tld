@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+                        "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<short-name>my</short-name>
+	<uri>/my</uri>
+	<display-name>my</display-name>
+	<!-- 分页组件标签 -->
+	<tag>
+		<name>pageTag</name>
+		<tag-class>com.jfbank.project.core.taglib.PageTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>pageResult</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>pageResult对象的存储在requst中的key</description>
+		</attribute>
+		<attribute>
+			<name>id</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>在页面dom中的id</description>
+		</attribute>
+		<attribute>
+			<name>haveParam</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>调用方法中是否包含唯一标识id</description>
+		</attribute>
+		<attribute>
+			<name>searchFunctionName </name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>执行搜索操作的js函数名称</description>
+		</attribute>
+	</tag>
+	<!-- 树标签：此树只为展现使用，无checkbox和radio -->
+	<tag>
+		<name>showTree</name>
+		<tag-class>com.jfbank.project.core.taglib.ShowTreeTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>id</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>id属性，标签的id</description>
+		</attribute>
+		<attribute>
+			<name>treeData</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				treeData对象的存储在requst中的key
+			</description>
+		</attribute>
+		<attribute>
+			<name>onClickFunctionName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				执行单击操作的js函数名称。
+			</description>
+		</attribute>
+	</tag>
+
+	<!-- 树标签：此树带有checkbox -->
+	<tag>
+		<name>boxTree</name>
+		<tag-class>com.jfbank.project.core.taglib.BoxTreeTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>id</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>id属性，标签的id</description>
+		</attribute>
+		<attribute>
+			<name>treeData</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				treeData对象的存储在requst中的key，json格式
+			</description>
+		</attribute>
+
+		<!-- <attribute> <name>onClickFunctionName</name> <required>false</required> 
+			<rtexprvalue>true</rtexprvalue> <description> 执行单击操作的js函数名称。 </description> 
+			</attribute> -->
+
+		<attribute>
+			<name>onCheckFunctionName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				执行选中操作的js函数名称。
+			</description>
+		</attribute>
+	</tag>
+
+	<!-- 字典下拉选择框标签 -->
+	<tag>
+		<name>selectDict</name>
+		<tag-class>com.jfbank.project.core.taglib.SelectDictTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>dictType</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>在数据库表tb_sys_dict表中，对应的dict_type字段</description>
+		</attribute>
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>name属性，该属性性质等同于html标签中的input的name</description>
+		</attribute>
+		<attribute>
+			<name>id</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>id属性，标签的id</description>
+		</attribute>
+		<attribute>
+			<name>value</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>如果该属性有值,则被默认选择。</description>
+		</attribute>
+		<attribute>
+			<name>onChange</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>该标签的onchange回调函数,回调javascript函数会接收到json参数，其中value为当前被选中的值，label为当前显示的文本。</description>
+		</attribute>
+		<attribute>
+			<name>cssClass</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>HTML标签CLASS。</description>
+		</attribute>
+	</tag>
+	<!-- 数据字典显示dictName标签 -->
+	<!-- <tag>
+		<name>printDict</name>
+		<tag-class>com.jfbank.project.core.taglib.PrintDictTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>code</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				code对象的存储在requst中的key。
+			</description>
+		</attribute>
+		<attribute>
+			<name>type</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				type对象的存储在requst中的key。
+			</description>
+		</attribute>
+	</tag> -->
+	<!-- 文件上传标签 -->
+	<tag>
+		<name>uploadTag</name>
+		<tag-class>com.jfbank.project.core.taglib.UploadTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>id</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>html的id</description>
+		</attribute>
+		<attribute>
+			<name>align</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description>
+			按钮的位置，浏览、上传、取消；
+			属性值为：center(居中);
+			left(居左);
+			right(居右)；
+			默认为center(居中);
+			</description>
+		</attribute>
+		<attribute>
+			<name>isShowCompleteFile</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description>
+			是否显示上传成功后的文件，默认为true（显示）
+			</description>
+		</attribute>
+		<attribute>
+			<name>onAllComplete</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				上传完成以后需要回调的js回调函数，该回调函数有一个参数，为array类型,数组中每个元素都为json类型。
+				.oldFileName 是上传以前的名称
+				.newFileName 是上传以后再服务器上的名称。
+				如果该属性为空，则没有回调函数
+			</description>
+		</attribute>
+		<attribute>
+			<name>isMulti</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>上传文件时，是否可以一次选择多个文件。默认false</description>
+		</attribute>
+		<attribute>
+			<name>uploadLimit</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description> 上传文件的数量，默认为1</description>
+		</attribute>
+		<attribute>
+			<name>sizeLimit</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>上传文件的限制的大小，默认为19871202</description>
+		</attribute>
+		<attribute>
+			<name>buttonName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>按钮的默认名称，默认为"上传文件"</description>
+		</attribute>
+		<attribute>
+			<name>fileDesc</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>如果配置了以下的'fileExt'属性，那么这个属性是必须的</description>
+		</attribute>
+		<attribute>
+			<name>fileExt</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>如果配置了以下的'fileDesc'属性，那么这个属性是必须的</description>
+		</attribute>
+	</tag>
+	<!-- 权限标签 -->
+	<tag>
+		<name>power</name>
+		<tag-class>com.jfbank.project.core.taglib.PowerTag</tag-class>
+		<attribute>
+			<name>menuCode</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				菜单权限的code
+			</description>
+		</attribute>
+	</tag>
+	<!-- 文件下载标签 -->
+	<tag>
+	    <name>downloadTag</name>
+		<tag-class>com.jfbank.project.core.taglib.DownloadTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>newFileName</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>新文件名称</description>
+		</attribute>
+		<attribute>
+			<name>oldFileName</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>旧文件名称</description>
+		</attribute>
+		<attribute>
+			<name>mPath</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>下载文件路径</description>
+		</attribute>
+	</tag>
+	
+</taglib>

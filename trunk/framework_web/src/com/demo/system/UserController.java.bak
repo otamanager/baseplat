@@ -1,0 +1,69 @@
+/**
+ * 
+ */
+package com.demo.system;
+
+import com.demo.base.BaseController;
+import com.jfinal.core.Controller;
+
+/**
+ * 用户管理
+ */
+public class UserController extends Controller implements BaseController {
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.demo.base.BaseController#index()
+	 */
+	@Override
+	public void index() {
+		setAttr("page", User.dao.queryPage(1, 10));
+		render("/system/userList");
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.demo.base.BaseController#add()
+	 */
+	@Override
+	public void add() {
+		// TODO Auto-generated method stub
+
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.demo.base.BaseController#delete()
+	 */
+	@Override
+	public void delete() {
+		// TODO Auto-generated method stub
+
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.demo.base.BaseController#modify()
+	 */
+	@Override
+	public void modify() {
+		// TODO Auto-generated method stub
+
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.demo.base.BaseController#query()
+	 */
+	@Override
+	public void query() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
