@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+body{font:normal 10px/18px "微软雅黑";color:normal;-webkit-text-size-adjust:none;}
+*{margin:0;padding:0;}
+a{text-decoration:none;}
+ul li{list-style:none;}
+em{font-style:normal;}
+
+.toolDiv{width:100%;min-width:1200px;height:50px;overflow:hidden;background:url(../imgs/bg.gif) 0 0 repeat-x;}
+.toolbar{height:50px;overflow:Hidden;}
+.div1{width:25px;padding:6px 19px 0 13px;float:left;overflow:hidden;}
+.div1 a{background:url(../imgs/sign1.png) 0 0 no-repeat;padding:25px 0 0;height:18px;line-height:18px;display:block;text-align:center;font-size:10px;color:#656f71;font-weight:bold;}
+.div1 .signout{background:url(../imgs/sign2.png) 0 0 no-repeat;}
+.div2{width:76px;margin:6px 0 0;border:solid 1px #acb2b8;float:left;padding:2px;}
+.div2 p{height:16px;line-height:16px;}
+.div2 p em{padding:0 0 0 10px;}
+
+.statlist{width:40px;padding:10px 0 0 7px;overflow:Hidden;float:left;}
+.statlist p{height:16px;line-height:16px;padding:0 0 0 14px;}
+.statlist .st1{background:url(../imgs/st1.png) 0 center no-repeat;color:#20b726;}
+.statlist .st2{background:url(../imgs/st2.png) 0 center no-repeat;color:#e22727;}
+
+.btnlist{width:340px;overflow:Hidden;float:left;}
+.btnlist li{width:43px;padding:6px 6px 0;float:left;background:url(../imgs/li_bg.png) right 0 no-repeat;}
+.btnlist li a{display:block;width:43px;text-align:center;color:#656f71;cursor:default;}
+.btnlist li a img{display:block;margin:0 auto;}
+.btnlist li a span{display:block;width:43px;height:16px;line-height:16px;text-align:center;}
+.btnlist li .na1{padding:25px 0 0;background:url(../imgs/img_b1.png) center 0 no-repeat;}
+.btnlist li .na2{padding:25px 0 0;background:url(../imgs/img_b2.png) center 0 no-repeat;}
+.btnlist li .na3{padding:25px 0 0;background:url(../imgs/img_b3.png) center 0 no-repeat;}
+.btnlist li .na4{padding:25px 0 0;background:url(../imgs/img_b4.png) center 0 no-repeat;}
+.btnlist li .na5{padding:25px 0 0;background:url(../imgs/img_b5.png) center 0 no-repeat;}
+.btnlist li .na6{padding:25px 0 0;background:url(../imgs/img_b6.png) center 0 no-repeat;}
+.btnlist li .na7{padding:25px 0 0;background:url(../imgs/img_b7.png) center 0 no-repeat;}
+.btnlist li .na8{padding:25px 0 0;background:url(../imgs/img_b8.png) center 0 no-repeat;}
+.btnlist .on .na1{padding:25px 0 0;background:url(../imgs/img_b1_sel.gif) center 0 no-repeat;}
+.btnlist .on .na2{padding:25px 0 0;background:url(../imgs/img_b2_sel.png) center 0 no-repeat;}
+.btnlist .on .na3{padding:25px 0 0;background:url(../imgs/img_b3_sel.png) center 0 no-repeat;}
+.btnlist .on .na4{padding:25px 0 0;background:url(../imgs/img_b4_sel.png) center 0 no-repeat;}
+.btnlist .on .na5{padding:25px 0 0;background:url(../imgs/img_b5_sel.png) center 0 no-repeat;}
+.btnlist .on .na6{padding:25px 0 0;background:url(../imgs/img_b6_sel.png) center 0 no-repeat;}
+.btnlist .on .na7{padding:25px 0 0;background:url(../imgs/img_b7_sel.png) center 0 no-repeat;}
+.btnlist .on .na8{padding:25px 0 0;background:url(../imgs/img_b8_sel.png) center 0 no-repeat;}
+.btnlist .active .na3{padding:25px 0 0;background:url(../imgs/img_b3_voice.png) center 0 no-repeat;}
+.btnlist .active .na1{padding:25px 0 0;background:url(../imgs/img_b1_sel.png) center 0 no-repeat;}
+.btnlist .active .na4{padding:25px 0 0;background:url(../imgs/img_b4_cancel.png) center 0 no-repeat;}
+.btnlist .active .na5{padding:25px 0 0;background:url(../imgs/img_b5_cancel.png) center 0 no-repeat;}
+.btnlist .active .na6{padding:25px 0 0;background:url(../imgs/img_b6_cancel.png) center 0 no-repeat;}
+.btnlist .active .na8{padding:25px 0 0;background:url(../imgs/img_b8_sel.png) center 0 no-repeat;}
+.btnlist .on a span,.btnlist .active a span{color:#223f51;}
+.btnlist .on a,.btnlist .active a{cursor:pointer;}
+.txt{width:140px;height:20px;padding:5px;overflow:hidden;float:left;display:block;margin:10px 0 0 0px;border:solid 1px #cad7e6;}
+.base_tit{width:30px;float:left;height:30px;line-height:30px;margin:10px 0 0;padding:0 0 0 6px;}
+.toolbar select{width:80px;float:left;margin:16px 0 0;}
+.btn{width:72px;height:30px;float:left;line-height:30px;margin:10px 0 0 8px;display:block;cursor:pointer;+line-height:20px;}

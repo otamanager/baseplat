@@ -1,0 +1,15 @@
+
+.deleteImage {
+display:inline;
+width:20px;
+height:20px;
+background:url(/xwWebEidt/webEidt/scripts/imgeClose1.gif) no-repeat;
+	vertical-align:top;border:none;	
+}
+.deleteImage:hover {
+display:inline;
+width:20px;
+height:20px;
+background:url(/xwWebEidt/webEidt/scripts/imgeClose1.gif) no-repeat;
+	vertical-align:top;border:none;	
+}
